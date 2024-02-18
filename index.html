@@ -298,9 +298,9 @@
                                 </p>
                             </div>
                             <!-- ------------- -->
-                            <div class="flex mb-6  px-2 py-2 rounded-xl bg-white">
-                                <input class="py-2 outline-none" type="text" placeholder="Have any Coupon?">
-                                <button class="text-base font-semibold text-white bg-[#1DD100] px-3 rounded-lg">Apply</button>
+                            <div id="hidden-section" class="flex mb-6  pl-2 py-1 rounded-xl bg-white">
+                                <input id="input-field" class="py-2 outline-none" type="text" placeholder="Have any Coupon?">
+                                <button onclick="inputCouponCode()" id="apply-button" class="btn text-base font-semibold text-white bg-[#1DD100] px-4 rounded-lg" disabled>Apply</button>
                             </div>
                             <!-- ------------------ -->
                             <div class="flex justify-between">
@@ -312,12 +312,11 @@
                         </div>
                         <form class="mt-6">
                             <label class="text-base font-semibold" for="">Passenger Name*</label>
-                            <input class="border-2 w-full mt-4 mb-6 p-5 rounded-2xl" type="text" placeholder="Enter your name">
+                            <input class="border-2 w-full mt-4 mb-6 p-5 rounded-2xl outline-none" type="text" placeholder="Enter your name">
                             <label class="text-base font-semibold" for="">Phone Number*</label>
-
-                            <input class="border-2 w-full mt-4 mb-6 p-5 rounded-2xl" type="tel" placeholder="Enter your phone number">
+                            <input class="border-2 w-full mt-4 mb-6 p-5 rounded-2xl outline-none" type="tel" placeholder="Enter your phone number">
                             <label class="text-base font-semibold" for="">Email ID</label>
-                            <input class="border-2 w-full mt-4 p-5 rounded-2xl" type="email" placeholder="Enter your email id">
+                            <input class="border-2 w-full mt-4 p-5 rounded-2xl outline-none" type="email" placeholder="Enter your email id">
                             <!-- <button class="btn text-xl font-extrabold text-white bg-[#1DD100] hover:bg-[#1DD100] w-full h-[60px] rounded-2xl border-none my-6">Next</button> -->
                             <!-- Open the modal using ID.showModal() method -->
 <button class="btn border-2 h-[60px] my-6 bg- w-full rounded-2xl border-none py-4 text-xl font-extrabold text-white bg-[#1DD100] hover:bg-[#1DD100]" onclick="my_modal_2.showModal()">Next</button>
@@ -409,7 +408,6 @@
             </div>
         </div> -->
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
