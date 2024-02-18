@@ -9,6 +9,7 @@ for(let i = 0;  i <allButton.length; i++){
         const bgColor = event.target;
         bgColor.style.backgroundColor = '#1DD100';
         bgColor.style.color = 'white';
+        event.target.setAttribute('disabled', true)
         
 
         // ticket title container
@@ -28,6 +29,13 @@ for(let i = 0;  i <allButton.length; i++){
         setInnerText('seat-left', seatCount);
     })
 }
+// Scroll option
+function scrollParibahan(){
+    const scrollSection = document.getElementById('scroll');
+    scrollSection.scrollIntoView({behavior:'smooth'});
+
+}
+
 // economoy container 
 function classContainer(id){
     const titleContainer = document.getElementById(id);
