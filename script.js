@@ -2,7 +2,15 @@ const allButton = document.querySelectorAll('.bttn');
 let count = 0;
 for(let i = 0;  i <allButton.length; i++){
     const bttn = allButton[i];
-    bttn.addEventListener('click',function(){
+    bttn.addEventListener('click',function(event){
+        count = count + 1;
+
+        // set backgrounf color of seet
+        const bgColor = event.target;
+        bgColor.style.backgroundColor = '#1DD100';
+        bgColor.style.color = 'white';
+        
+
         // ticket title container
         const title = bttn.querySelector('h3').innerText;
         const titleContainer = document.getElementById('title-containet');
@@ -10,11 +18,14 @@ for(let i = 0;  i <allButton.length; i++){
         p.innerText = title;
         titleContainer.appendChild(p);
 
+        // after seat booking count
+        const seatCountLeft =parseInt(document.getElementById('seat-left').innerText);
+        let seatCount = seatCountLeft - 1;
+
         classContainer('class-container');
         priceContainer('price-container');
-
-        
-        
+        setInnerText('seat-count', count);
+        setInnerText('seat-left', seatCount);
     })
 }
 // economoy container 
