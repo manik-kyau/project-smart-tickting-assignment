@@ -134,7 +134,8 @@
                             <div class="w-[250px] flex gap-2 bg-[#1dd10026] py-2 items-center justify-center rounded-xl">
                                 <img class="w-9 h-9 border-dashed border-gray-300 border-2" src="images/seatgreen.png" alt="">
                                 <!-- ------------- -->
-                                <h3 class="text-lg font-medium text-[#1DD100]">   <span>40 </span>Seats left</h3>
+                                <h3 class="text-lg font-medium text-[#1DD100]">
+                                    <span id="seat-left">40</span>Seats left</h3>
                             </div>
                             
             
@@ -172,7 +173,7 @@
                 </div>
             </div>
             <div class="max-w-[1180px] mx-auto">
-                <div class="flex bg-white p-8 rounded-xl">
+                <div class="flex flex-col lg:flex-row gap-10 lg:gap-0 bg-white p-8 rounded-xl">
                     <div class="w-full pr-8">
                         <h1 class=" text-2xl font-semibold text-[#030712]">Select Your Seat</h1>
                         <div class="flex justify-between border-dashed border-y-2 border-[#03071233] py-4 mt-6">
@@ -190,75 +191,101 @@
                                 <img src="images/Vector.png" alt="">
                             </div>
                         </div>
-                        <div class="flex justify-between">
-                            <div class="grid grid-cols-2 gap-6">
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">A1</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">A2</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">B1</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">B2</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">C1</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">C2</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">D1</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">D2</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">E1</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">E2</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">F1</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">F2</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">G1</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">G2</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">H1</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">H2</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">I1</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">I2</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">J1</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">J2</div>
+                        <div class="flex flex-col lg:flex-row justify-between gap-10">
+                            <div class="flex gap-3">
+                                <div class="space-y-6">
+                                    <div class="h-[56px] w-[50px] flex justify-center items-center rounded-xl text-lg font-medium text-[#03071280]">A</div>
+                                    <div class="h-[56px] w-[50px] flex justify-center items-center rounded-xl text-lg font-medium text-[#03071280]">B</div>
+                                    <div class="h-[56px] w-[50px] flex justify-center items-center rounded-xl text-lg font-medium text-[#03071280]">C</div>
+                                    <div class="h-[56px] w-[50px] flex justify-center items-center rounded-xl text-lg font-medium text-[#03071280]">D</div>
+                                    <div class="h-[56px] w-[50px] flex justify-center items-center rounded-xl text-lg font-medium text-[#03071280]">E</div>
+                                    <div class="h-[56px] w-[50px] flex justify-center items-center rounded-xl text-lg font-medium text-[#03071280]">F</div>
+                                    <div class="h-[56px] w-[50px] flex justify-center items-center rounded-xl text-lg font-medium text-[#03071280]">G</div>
+                                    <div class="h-[56px] w-[50px] flex justify-center items-center rounded-xl text-lg font-medium text-[#03071280]">H</div>
+                                    <div class="h-[56px] w-[50px] flex justify-center items-center rounded-xl text-lg font-medium text-[#03071280]">I</div>
+                                    <div class="h-[56px] w-[50px] flex justify-center items-center rounded-xl text-lg font-medium text-[#03071280]">J</div>
+                                </div>
+                                <div class="grid grid-cols-2 gap-6">
+                                    
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>A1</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>A2</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>B1</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>B2</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>C1</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>C2</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>D1</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>D2</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>E1</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>E2</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>F1</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>F2</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>G1</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>G2</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>H1</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>H2</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>I1</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>I2</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>J1</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>J2</h3></div>
+                                </div>
                             </div>
-                            <div class="grid grid-cols-2 gap-6">
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">A3</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">A4</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">B3</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">B4</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">C3</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">C4</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">D3</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">D4</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">E3</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">E4</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">F3</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">F4</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">G3</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">G4</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">H3</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">H4</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">I3</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">I4</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">J3</div>
-                                <div class="h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]">J4</div>
+                            <div class="flex gap-3">
+                                <div class="space-y-6 lg:hidden">
+                                    <div class="h-[56px] w-[50px] flex justify-center items-center rounded-xl text-lg font-medium text-[#03071280]">A</div>
+                                    <div class="h-[56px] w-[50px] flex justify-center items-center rounded-xl text-lg font-medium text-[#03071280]">B</div>
+                                    <div class="h-[56px] w-[50px] flex justify-center items-center rounded-xl text-lg font-medium text-[#03071280]">C</div>
+                                    <div class="h-[56px] w-[50px] flex justify-center items-center rounded-xl text-lg font-medium text-[#03071280]">D</div>
+                                    <div class="h-[56px] w-[50px] flex justify-center items-center rounded-xl text-lg font-medium text-[#03071280]">E</div>
+                                    <div class="h-[56px] w-[50px] flex justify-center items-center rounded-xl text-lg font-medium text-[#03071280]">F</div>
+                                    <div class="h-[56px] w-[50px] flex justify-center items-center rounded-xl text-lg font-medium text-[#03071280]">G</div>
+                                    <div class="h-[56px] w-[50px] flex justify-center items-center rounded-xl text-lg font-medium text-[#03071280]">H</div>
+                                    <div class="h-[56px] w-[50px] flex justify-center items-center rounded-xl text-lg font-medium text-[#03071280]">I</div>
+                                    <div class="h-[56px] w-[50px] flex justify-center items-center rounded-xl text-lg font-medium text-[#03071280]">J</div>
+                                </div>
+                                <div class="grid grid-cols-2 gap-6">
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>A3</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>A4</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>B3</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>B4</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>C3</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>C4</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>D3</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>D4</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>E3</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>E4</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>F3</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>F4</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>G3</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>G4</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>H3</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>H4</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>I3</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>I4</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>J3</h3></div>
+                                    <div class="bttn btn h-[56px] w-[110px] flex justify-center items-center bg-[#F7F8F8] rounded-xl text-lg font-medium text-[#03071280]"><h3>J4</h3></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <!-- form Part -->
-                    <div class="w-[600px] border-dashed border-l-2 border-[#03071233] pl-8">
+                    <div class="w-[600px] border-dashed lg:border-l-2 border-[#03071233] pl-8">
                         <h1 class=" text-2xl font-semibold text-[#030712] border-dashed border-b-2 border-[#03071233] pb-6">Select Your Seat</h1>
                         <div class="bg-[#F7F8F8] mt-6 p-6 rounded-xl">
                             <div class="flex justify-between py-4  border-dashed border-b-2 border-[#03071233]">
-                                <h3 class="text-base text-[#030712] font-medium">Seat<sup class="text-sm bg-[#1DD100] px-2 rounded h-1">0</sup></h3>
+                                <h3 class="text-base text-[#030712] font-medium">Seat<sup class="text-sm bg-[#1DD100] px-2 rounded h-1 text-white">0</sup></h3>
                                 <h3 class="text-base text-[#030712] font-medium">Class</h3>
                                 <h3 class="text-base text-[#030712] font-medium">Price</h3>
                             </div>
                             <!-- -------------------------- -->
                             <div class="flex justify-between py-4 text-[#03071299]">
-                                <div>
-                                    <h3>C2</h3> 
-                                    <h3>C2</h3>
+                                <div id="title-containet">
+                                    
                                 </div>
-                                <div>
-                                    <p>Economoy</p>
-                                    <p>Economoy</p>
+                                <div id="class-container">
+                                    
                                 </div>
-                                <div>
-                                    <p>550</p>
-                                    <p>550</p>
+                                <div id="price-container">
+                                    
                                 </div>
                             </div>
                             <hr>
@@ -266,7 +293,7 @@
                             <div class="flex justify-between py-4">
                                 <p class="text-base text-[#030712] font-medium">Total Price</p>
                                 <p class="text-base text-[#030712] font-medium">
-                                    BDT:1100 <span></span>
+                                    BDT:<span id="total">0</span>
                                 </p>
                             </div>
                             <!-- ------------- -->
@@ -278,7 +305,7 @@
                             <div class="flex justify-between">
                                 <p class="text-base text-[#030712] font-medium">Grand Total</p>
                                 <p class="text-base text-[#030712] font-medium">
-                                    BDT:1100 <span></span>
+                                    BDT:<span id="grandtotal">0</span>
                                 </p>
                             </div>
                         </div>
@@ -381,6 +408,7 @@
             </div>
         </div> -->
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
