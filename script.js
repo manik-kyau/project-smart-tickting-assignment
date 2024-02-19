@@ -48,7 +48,7 @@ function classContainer(id){
 function priceContainer(id){
     const priceContainer = document.getElementById(id);
     const p = document.createElement('p');
-    p.innerText = '550'
+    p.innerText = '550';
     priceContainer.appendChild(p);
     const ticketPrice = parseFloat(document.getElementById('price-container').childNodes[1].innerText);
     // sum of total ticket price
@@ -77,12 +77,18 @@ function inputCouponCode(){
         setInnerText('grandtotal', discount);
     }
     else{
-        alert('Invalid Coupon Code');
+        const shownSection = document.getElementById('hidden-section');
+        const shown = shownSection.classList.remove('hidden');
+        alert('Invalid Coupon Code.');
     }
 };
 function hideSectionById(sectionId){
     const hideSection = document.getElementById(sectionId);
     const hide = hideSection.classList.add('hidden');
+};
+function showSectionById(sectionId){
+    const showSection = document.getElementById(sectionId);
+    const shown = showSection.classList.remove('hidden');
 };
 //  set inner text
 function setInnerText(id, value){
