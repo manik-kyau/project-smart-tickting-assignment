@@ -314,30 +314,10 @@
                             <label class="text-base font-semibold" for="">Passenger Name*</label>
                             <input class="border-2 w-full mt-4 mb-6 p-5 rounded-2xl outline-none" type="text" placeholder="Enter your name">
                             <label class="text-base font-semibold" for="">Phone Number*</label>
-                            <input class="border-2 w-full mt-4 mb-6 p-5 rounded-2xl outline-none" type="tel" placeholder="Enter your phone number">
+                            <input id="email" class="border-2 w-full mt-4 mb-6 p-5 rounded-2xl outline-none" type="tel" placeholder="Enter your phone number">
                             <label class="text-base font-semibold" for="">Email ID</label>
-                            <input class="border-2 w-full mt-4 p-5 rounded-2xl outline-none" type="email" placeholder="Enter your email id">
-                            <!-- <button class="btn text-xl font-extrabold text-white bg-[#1DD100] hover:bg-[#1DD100] w-full h-[60px] rounded-2xl border-none my-6">Next</button> -->
-                            <!-- Open the modal using ID.showModal() method -->
-<button class="btn border-2 h-[60px] my-6 bg- w-full rounded-2xl border-none py-4 text-xl font-extrabold text-white bg-[#1DD100] hover:bg-[#1DD100]" onclick="my_modal_2.showModal()">Next</button>
-<dialog id="my_modal_2" class="modal">
-  <div class="modal-box h-[500px] ">
-    <div class="flex flex-col items-center text-center justify-center border-2 h-full">
-        <img class="h-24 w-24" src="images/success.png" alt="">
-    <h3 class="font-bold text-xl text-center text-[#1DD100] mt-8 font-semibold">SUCCESS</h3>
-    <p class="py-4 text-[#030712cc] text-lg">
-        Thank you for Booking Our Bus Seats. 
-       
-        We are working hard to find the best service and deals for you.
-    </p>
-    <p class="text-[#03071299] text-base">Shortly you will find a confirmation in your email.</p>
-    <button class="bg-[#1DD100] rounded-full text-xl font-semibold text-white px-10 mt-6 py-2">Continue</button>
-    </div>
-  </div>
-  <form method="dialog" class="modal-backdrop ">
-    <button>close</button>
-  </form>
-</dialog>
+                            <input id="phoneNum" class="border-2 w-full mt-4 p-5 rounded-2xl outline-none" type="email" placeholder="Enter your email id">
+                            <button id="submitBtn" class="btn text-xl font-extrabold text-white bg-[#1DD100] hover:bg-[#1DD100] w-full h-[60px] rounded-2xl border-none my-6" disabled>Next</button>
 
                             <div class=" text-[#03071299] mx-auto space-y-3">
                                 <a class="text-base font-normal ml-4 underline" href="">Terms and Conditions</a>

@@ -8,13 +8,12 @@ for(let i = 0;  i <allButton.length; i++){
         if(count >= 4){
             document.getElementById('apply-button').disabled = false;
         }
-
-
+        
         // set backgrounf color of seet
         const bgColor = event.target;
         bgColor.style.backgroundColor = '#1DD100';
         bgColor.style.color = 'white';
-        event.target.setAttribute('disabled', true)
+        event.target.setAttribute('disabled', true);
         
         // ticket title container
         const title = bttn.querySelector('h3').innerText;
@@ -31,16 +30,13 @@ for(let i = 0;  i <allButton.length; i++){
         priceContainer('price-container');
         setInnerText('seat-count', count);
         setInnerText('seat-left', seatCount);
-        
-
     })
-}
+};
 // Scroll option
 function scrollParibahan(){
     const scrollSection = document.getElementById('scroll');
     scrollSection.scrollIntoView({behavior:'smooth'});
 };
-
 // economoy container 
 function classContainer(id){
     const titleContainer = document.getElementById(id);
@@ -48,7 +44,6 @@ function classContainer(id){
     p.innerText = 'Economoy';
     titleContainer.appendChild(p);
 };
-
 // price container 
 function priceContainer(id){
     const priceContainer = document.getElementById(id);
@@ -70,22 +65,20 @@ function priceContainer(id){
 function inputCouponCode(){
 
     hideSectionById('hidden-section');
-    
-    const inputCoupon = document.getElementById('input-field').value;
+
+    const inputCoupon = document.getElementById('input-field').value.split(' ').join('').toUpperCase();
     const grandTotalCost = parseInt(document.getElementById('grandtotal').innerText);
     if(inputCoupon === 'NEW15'){
         const discount = grandTotalCost - (grandTotalCost * 0.15);
         setInnerText('grandtotal', discount);
     }
-
-    else if(inputCoupon === 'Couple 20'){
+    else if(inputCoupon === 'COUPLE20'){
         const discount = grandTotalCost - (grandTotalCost * 0.2);
         setInnerText('grandtotal', discount);
     }
     else{
         alert('Invalid Coupon Code');
     }
-    
 };
 function hideSectionById(sectionId){
     const hideSection = document.getElementById(sectionId);
@@ -94,4 +87,18 @@ function hideSectionById(sectionId){
 //  set inner text
 function setInnerText(id, value){
     document.getElementById(id).innerText = value;
+};
+//  input form 
+const emailAddress = document.getElementById('email');
+emailAddress.addEventListener('input',submitInputText);
+const phoneNumber = document.getElementById('phoneNum');
+phoneNumber.addEventListener('input',submitInputText);
+const submitButton = document.getElementById('submitBtn');
+function submitInputText(){
+    if(emailAddress.value.trim() !== '' && phoneNumber.value.trim() !== ''){
+        submitButton.disabled = false;
+    }
+    else{
+        submitButton.disabled = true;
+    }
 };
