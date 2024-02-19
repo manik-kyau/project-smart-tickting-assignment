@@ -1,18 +1,25 @@
-const allButton = document.querySelectorAll('.bttn');
+const allButtons = document.querySelectorAll('.bttn');
 let count = 0;
-for(let i = 0;  i <allButton.length; i++){
-    const bttn = allButton[i];
+for(let i = 0;  i <allButtons.length; i++){
+    const bttn = allButtons[i];
     bttn.addEventListener('click',function(event){
-        count = count + 1;
+        count++;
+        if(count >= 4){
+            for(let j = 0; j < allButtons.length; j++){
+                const bttn2 = allButtons[j];
+                bttn2.disabled = true;
+            }
+            // alert('You cannot take more than 4 tickets!');
+        }
+        submitInputText();
         // enable Apply button
         if(count >= 4){
             document.getElementById('apply-button').disabled = false;
         }
         
         // set backgrounf color of seet
-        const bgColor = event.target;
-        bgColor.style.backgroundColor = '#1DD100';
-        bgColor.style.color = 'white';
+        event.target.style.backgroundColor = '#1DD100';
+        event.target.style.color = 'white';
         event.target.setAttribute('disabled', true);
         
         // ticket title container
@@ -94,14 +101,16 @@ function showSectionById(sectionId){
 function setInnerText(id, value){
     document.getElementById(id).innerText = value;
 };
+
 //  input form 
 const emailAddress = document.getElementById('email');
-emailAddress.addEventListener('input',submitInputText);
 const phoneNumber = document.getElementById('phoneNum');
-phoneNumber.addEventListener('input',submitInputText);
 const submitButton = document.getElementById('submitBtn');
+emailAddress.addEventListener('input',submitInputText);
+phoneNumber.addEventListener('input',submitInputText);
+
 function submitInputText(){
-    if(emailAddress.value.trim() !== '' && phoneNumber.value.trim() !== ''){
+    if(emailAddress.value.trim() !=='' && phoneNumber.value.trim() !=='' && count >= 1){
         submitButton.disabled = false;
     }
     else{
